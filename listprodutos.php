@@ -1,5 +1,5 @@
 <?php
-//inlcusao da conexao com o banco
+//conexao com o banco
 include "connect.php";
 ?>
 
@@ -38,7 +38,7 @@ include "connect.php";
     <?php
     include "navbar.php";
     ?>
-    <!--Background-->
+    <!--fundo-->
     <div style="background-color: white;">
         <br>
         <h1 style="color: orangered; Text-align:center">GN Vendas</h1>
@@ -47,7 +47,7 @@ include "connect.php";
         <div style="background-color:lightgray" class="m-2 p-2">
             <form name="formCadastro" action="comprar.php" method="POST" class="need-validation" target="_blank">
 
-                <!--Executando o select de todos os produtos-->
+                <!--consultando todos os produtos-->
                 <?php
                 $SQL = "SELECT * FROM produtos ORDER BY id_produto";
                 $query = $conn->query($SQL);
@@ -57,6 +57,7 @@ include "connect.php";
                     <div class="col-7">
                         <p class="h4" style="text-align: center;">Produtos Cadastrados</p>
                         <br>
+                        <!--criação da tabela com os produtos cadastrados-->
                         <table class="table table-sm table-hover bg-white table-bordered">
                             <thead class="thead bg-primary text-white">
                                 <tr>
@@ -86,7 +87,7 @@ include "connect.php";
                         
                     </div>
                     <div class="col-5">
-                        <!--coletando dados para geração do boleto-->
+                        <!--coleta de dados para geração do boleto-->
                         <h4 style="text-align: center;">Insira os dados que serão exibidos em seu boleto:</h4>
                         <label for="nomePessoa">Nome completo: </label>
                         <input type="text" name="nomeCompleto" id="nomeCompleto" class="form-control" required>

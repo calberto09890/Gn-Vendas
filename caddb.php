@@ -2,7 +2,7 @@
 //conexao com o banco
 include "connect.php";
 
-//Recebendo os dados vindos do form de cadastro de produtos
+//recebendo os dados vindos do form de cadastro de produtos
 $nome = $_POST["nomeProduto"];
 $valor = $_POST["valorProduto"];
 

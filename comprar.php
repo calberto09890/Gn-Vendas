@@ -1,5 +1,5 @@
 <?php
-//inclusão da conexao com o BD
+//conexao com o banco
 include "connect.php";
 
 //recebendo os dados vindos do formulario de compra
@@ -17,9 +17,11 @@ $valido = $valido->format("Y-m-d");
 $sqlProduto = "SELECT * FROM produtos WHERE id_produto = '{$idProd}';";
 $query = $conn->query($sqlProduto) or die($conn->error);
 $prod = $query->fetch_assoc();
+
 //salvando os valores em variaveis separadas
 $nomeP = $prod["nome_produto"];
 $valorP = (int)$prod["valor_produto"];
+
 //multiplicando os valores decimais
 $valorP = $valorP * 100;
 

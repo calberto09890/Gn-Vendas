@@ -16,19 +16,24 @@
     <?php
     include "navbar.php";
     ?>
-    <!--Background-->
+    <!--fundo-->
     <div style="background-color: white;">
+    <br>
+        <h1 style="color: orangered; Text-align:center">GN Vendas</h1>
+        <br>
         <!--bloco principal da pagina-->
         <div style="background-color:lightgray" class="container-fluid m-2 p-2">
             <form name="formCadastro" action="caddb.php" method="POST" class="need-validation ">
-                <h1 class="text-center" style="color:blue">Cadastro de novos produtos</h1>
+                <h4 class="text-center" >Cadastro de novos produtos</h4>
                 <label for="nomeProduto" class="h5">Nome do produto:</label>
                 <input type="text" name="nomeProduto" id="nomeProduto" class="form-control form-group" required>
                 <label for="valorProduto" class="h5">Valor do produto:</label>
                 <input type="number" name="valorProduto" id="valorProduto" step="0.01" min="0.01" class="form-control form-group" required>
-                <!--buttons de envio e cancelamento-->
-                <button type="submit" class="btn btn-success form-group">Cadastrar</button>
-                <button type="reset" class="btn btn-danger form-group">Cancelar</button>
+                <!--butões de cadastrar e cancelar-->
+                <div class= "d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success form-group mr-5">Cadastrar</button>
+                    <button type="reset" class="btn btn-danger form-group">Cancelar</button>
+                </div>
             </form>
 
         </div>
